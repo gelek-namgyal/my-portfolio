@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navigation Bar (Icons as Links) -->
+  <div class="nav-icons">
+    <a href="#about" title="About Me"><i class="fas fa-user"></i></a>
+    <a href="#education" title="Education"><i class="fas fa-graduation-cap"></i></a>
+    <a href="#projects" title="Projects"><i class="fa-solid fa-briefcase"></i></a>
+    <a href="#contact" title="Contact"><i class="fas fa-envelope"></i></a>
+    <a href="#home" title="Home"><i class="fas fa-home"></i></a>
+  </div>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <img src="img/gelek.jpg" alt="Your Photo" class="profile-photo">
+        <div class="hero-text">
+          <h1>Gelek Namgyal Tamang</h1>
+          <p>Welcome to my personal space!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- About Me Section -->
+<section id="about" class="about-me-section">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>
+        Hi, I'm [Your Name], a passionate web developer and designer. 
+        I specialize in creating beautiful, functional websites that provide great user experiences. 
+        My journey began with an interest in technology and design, 
+        and now I combine both to build websites and applications that solve problems.
+         I love learning new skills and collaborating with other creative minds to bring ideas to life.
+          When I'm not coding, you can find me exploring new places, capturing beautiful moments through photography, 
+          or playing video games.
+      </p> <br>
+      <!-- Download CV Button -->
+      <div class="download-cv">
+        <a href="path-to-your-cv.pdf" class="btn" download="Your_Name_CV">Download CV</a>
+      </div>
+      <br>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/yourprofile" target="_blank" title="Facebook">
+            <i class="fa-brands fa-facebook"></i>
+        </a>
+        <a href="https://twitter.com/yourprofile" target="_blank" title="Twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://www.instagram.com/yourprofile" target="_blank" title="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://github.com/yourprofile" target="_blank" title="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+<!-- Education Section -->
+<section id="education" class="education-section">
+    <div class="container">
+        <h2>My Education</h2>
+        <p>Here's a glimpse into my academic journey:</p>
+        
+        <!-- Timeline Line -->
+        <div class="education-graph">
+            <svg width="1200" height="150" viewBox="0 0 1200 150" xmlns="http://www.w3.org/2000/svg">
+                <!-- Horizontal Line -->
+                <line x1="50" y1="75" x2="1150" y2="75" stroke="#333" stroke-width="2" />
+                
+                <!-- Points on the line -->
+                <circle cx="50" cy="75" r="8" fill="black" />
+                <circle cx="600" cy="75" r="8" fill="black" />
+                <circle cx="1150" cy="75" r="8" fill="black" />
+            </svg>
+        </div>
+
+        <!-- Timeline Milestones -->
+        <div class="education-timeline">
+            <!-- First Milestone (Completed Year) -->
+            <div class="education-year" style="left: 20px; top: 0px;">
+                <h3>- 2020</h3>
+                <p>Shree Mahabouddha Secondary School(SEE)</p>
+                <p>Yalwang, Humla</p>
+                <a href="certificate-link-2020.pdf" class="view-certificate-btn" target="_blank">View Certificate</a>
+            </div>
+
+            <!-- Second Milestone (+2 College) -->
+            <div class="education-year" style="left: 570px; top: 0px;">
+                <h3>2020-2022</h3>
+                <p>South Western State College(+2)</p>
+                <p>Basundhara, Kathmandu</p>
+                <a href="certificate-link-2020.pdf" class="view-certificate-btn" target="_blank">View Certificate</a>
+            </div>
+
+            <!-- Third Milestone (Current Year) -->
+            <div class="education-year" style="left: 1100px; top: 0px;">
+                <h3>2022 -</h3>
+                <p>Asian College Of Higher Studies(Running)</p>
+                <p>Ekantakuna, Lalitpur</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+  
+<!-- Projects Section -->
+<section id="projects" class="projects-section">
+    <div class="container">
+        <h2>My Projects</h2>
+        <p>Here are some of the projects I've worked on:</p>
+        <div class="projects">
+            <!-- <div class="project-item">
+                <img src="img/gelek.jpg" alt="Project 1">
+                <div class="project-info">
+                    <h3>Project 1</h3>
+                    <p>A description of Project 1 goes here. It's a web application built using HTML, CSS, JavaScript, etc.</p>
+                    <a href="https://link-to-project1.com" target="_blank">View Project</a>
+                </div>
+            </div> -->
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Contact Section -->
+<section id="contact" class="contact-section">
+    <div class="container">
+        <h2>Contact Me</h2>
+        <p>If you'd like to get in touch, here's how you can reach me:</p>
+
+        <!-- Contact Details -->
+        <div class="contact-details">
+            <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <h3>Email</h3>
+                <p><a href="mailto:geleknamgyal51@gmail.com">geleknamgyal51@gmail.com</a></p>
+            </div>
+            
+            <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <h3>Phone</h3>
+                <p><a href="tel:+977 9863164952">+9779863164952</a></p>
+            </div>
+            
+            <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>Address</h3>
+                <p>Namkha-2,Kermi, Humla</p>
+            </div>
+            
+            <div class="contact-item">
+                <i class="fas fa-link"></i>
+                <h3>Website</h3>
+                <p><a href="https://www.gelek.com.np" target="_blank">www.gelek.com.np</a></p>
+            </div>
+        </div>
+
+        <!-- Contact Form (Optional) -->
+        <div class="contact-form">
+            <h3>Send a Message</h3>
+            <form action="php/send-mail.php" method="POST"></form>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 Gelek Namgyal Tamang. All Rights Reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

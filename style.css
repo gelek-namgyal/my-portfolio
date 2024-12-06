@@ -1,0 +1,378 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Roboto Mono', monospace;
+    background-color: white;
+    color: black;
+}
+
+/* Navigation Bar Styling */
+.nav-icons {
+    position: fixed;
+    top: 20px;
+    right: 40px; /* Align to the top-right */
+    display: flex;
+    justify-content: flex-start; /* Align items to the start of the flex container */
+    align-items: center; /* Align icons vertically in the center */
+    padding: 15px 30px; /* Add padding for space around icons */
+    z-index: 1000;
+}
+
+.nav-icons a {
+    position: relative; /* Make the anchor position relative */
+    font-size: 1.5rem;
+    color: black;
+    text-decoration: none; /* Remove underline */
+    display: flex;
+    align-items: center;
+    margin-left: 120px;
+}
+
+/* Tooltip (Description) for Icons */
+.nav-icons a::after {
+    content: "";
+    position: absolute;
+    top: 50%; /* Align the tooltip vertically with the icon */
+    left: 100%; /* Position it to the right of the icon */
+    transform: translateX(10px) translateY(-50%); /* Adjust the position to the right */
+    padding: 5px 10px;
+    color: black;
+    border-radius: 5px;
+    font-size: 1rem;
+    opacity: 0; /* Hidden by default */
+    visibility: hidden; /* Hidden by default */
+    white-space: nowrap; /* Prevent text from wrapping */
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Show description on hover */
+.nav-icons a:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+.nav-icons a[href="#about"]::after {
+    content: "About Me"; /* Text for About Me icon */
+}
+
+.nav-icons a[href="#education"]::after {
+    content: "Education"; /* Text for Education icon */
+}
+
+.nav-icons a[href="#projects"]::after {
+    content: "Project"; /* Text for Gallery icon */
+}
+
+.nav-icons a[href="#contact"]::after {
+    content: "Contact"; /* Text for Contact icon */
+}
+
+.nav-icons a[href="#home"]::after {
+    content: "Home"; /* Text for Home icon */
+}
+
+/* Hero Section Styling */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 15px 50px; /* Added padding-top to avoid overlap with nav */
+    background-color: white;
+    height: 100vh;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.profile-photo {
+    width: 470px;
+    height: 500px;
+    border-radius: 50%;
+    margin-top: -100px; /* Move the image up */
+}
+
+
+.hero-text {
+    max-width: 600px;
+    margin-top: -100px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.hero p {
+    margin: 10px 0;
+    margin-left: 50px;
+    font-size: 1.5rem;
+    color: black;
+}
+
+/* About Me Section Styling */
+.about-me-section {
+    padding: 60px 15px;
+    text-align: center;
+    height: 100vh;
+}
+
+.about-me-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: black;
+}
+
+.about-me-section p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+
+.social-icons a {
+    font-size: 2.5rem;
+    color: black;
+}
+
+.social-icons i {
+    font-size: 2rem; /* Adjust icon size */
+}
+
+/* Download CV Button Styling */
+.download-cv {
+    margin: 20px 0;
+}
+
+.download-cv .btn {
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 2px solid black; /* Black border */
+}
+
+/* Education Section Styling */
+.education-section {
+    padding: 60px 15px;
+    text-align: center;
+    height: 100vh;
+}
+
+.education-section h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: black;
+}
+
+.education-section p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: black;
+}
+
+/* Timeline Graph */
+.education-graph {
+    width: 100%;
+    height: 150px;
+    margin-top: 40px;
+}
+
+.education-graph svg {
+    width: 100%;
+    height: 100%;
+}
+
+.education-graph line {
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+/* Points on the Line */
+.education-graph circle {
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.education-graph circle:hover {
+    transform: scale(1.5);
+    fill: black;
+}
+
+/* Timeline Year Markers */
+.education-timeline {
+    position: relative;
+    margin-top: -80px;
+}
+
+.education-year {
+    position: absolute;
+    width: 250px;
+    text-align: center;
+    font-size: 1.2rem;
+    color: black;
+}
+
+.education-year h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.education-year p {
+    font-size: 1rem;
+    margin-top: 0px;
+    color: black;
+}
+
+/* Adjusted position of the years */
+.education-year:nth-child(1) { top: 95px; } /* First point below the line */
+.education-year:nth-child(2) { top: 40px; } /* Second point above the line */
+.education-year:nth-child(3) { top: 95px; } /* Third point below the line */
+
+/* View Certificate Button */
+.view-certificate-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 2px solid black; /* Black border */
+    font-size: 1rem;
+}
+
+
+
+/* Projects Section Styling */
+.projects-section {
+    padding: 60px 15px;
+    text-align: center;
+    height: 100vh;
+}
+
+.projects-section h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: black;
+}
+
+.projects-section p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: black;
+}
+
+/* Contact Section Styling */
+.contact-section {
+    padding: 60px 15px;
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.contact-section p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: #555;
+}
+
+/* Contact Details Styling */
+.contact-details {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.contact-item {
+    text-align: center;
+}
+
+.contact-item i {
+    font-size: 2rem;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.contact-item h3 {
+    font-size: 1.5rem;
+    color: black;
+    margin-bottom: 5px;
+}
+
+.contact-item p {
+    font-size: 1rem;
+    color: black;
+    text-decoration: none;
+}
+
+/* Contact Form Styling */
+.contact-form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 5px;
+    border: 2px solid black; /* Black border */
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.contact-form h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: black;
+}
+
+.contact-form label {
+    display: block;
+    font-size: 1rem;
+    color: black;
+    margin-top: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    cursor: pointer;
+    border: 2px solid black; /* Black border */
+}
+
+
+
+
+/* Footer */
+footer {
+    background-color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
